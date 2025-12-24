@@ -1,0 +1,76 @@
+:root {
+    --jago-yellow: #FFD500;
+    --jago-dark: #1A1A1A;
+}
+
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.logo-box {
+    width: 32px; height: 32px; background: var(--jago-yellow);
+    border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; font-weight: 900; font-size: 20px; font-style: italic;
+}
+
+.main-card {
+    background: var(--jago-dark);
+    padding: 30px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.glow-effect {
+    position: absolute; top: -20%; right: -10%;
+    width: 180px; height: 180px; background: rgba(255, 213, 0, 0.15);
+    border-radius: 50%; filter: blur(40px);
+}
+
+.btn-action {
+    flex: 1; padding: 12px; border-radius: 18px;
+    font-weight: 800; font-size: 12px; text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-yellow { background: var(--jago-yellow); color: var(--jago-dark); }
+.btn-glass { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.1); }
+
+.stat-box {
+    background: white; padding: 15px; border-radius: 20px;
+    border: 1px solid #EDF2F7;
+}
+
+.modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px); z-index: 100; display: flex; align-items: flex-end;
+}
+
+.modal-content {
+    background: white; width: 100%; border-radius: 35px 35px 0 0;
+    padding: 30px; transform: translateY(0); transition: 0.4s ease-out;
+}
+
+.input-field {
+    width: 100%; background: #F7FAFC; border: 2px solid #EDF2F7;
+    padding: 15px; border-radius: 18px; outline: none; transition: 0.2s;
+}
+
+.input-field:focus { border-color: var(--jago-yellow); }
+
+.btn-save {
+    width: 100%; background: var(--jago-dark); color: white;
+    padding: 15px; border-radius: 18px; font-weight: 800;
+}
+
+.item-card {
+    background: white; padding: 18px; border-radius: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    border: 1px solid #EDF2F7;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in { animation: slideIn 0.5s ease-out; }
